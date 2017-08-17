@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>渐变色</title>
+	<link rel="stylesheet" href="css/common.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<style>
+
+		.colorWWW{
+			width: 100%;
+			margin: 30px 0;
+		}
+
+		.colorWWW .colorLink{
+			margin: 0 30px;
+		    height: auto;
+		    overflow: hidden;
+		}
+
+		.colorWWW li{
+		    float: left;
+		    height: 50px;
+		    line-height: 50px;
+		    font-size: 20px;
+		    font-weight: 600;
+		    background-color: #fff !important;
+		    border-radius: 6px;
+		    margin: 10px;
+		    width: 155px;
+    		padding-right: 5px;
+		}
+
+		.colorWWW li:hover{
+		    box-shadow: 5px 5px 10px #ddd;
+			cursor: pointer;
+		}
+
+		.colorWWW a{
+			position: relative;
+		    display: block;
+		    line-height: 50px;
+		    padding-left: 50px;
+		    font-weight: 600;
+		}
+
+		.colorWWW a img{
+		 	position: absolute;
+		    left: 5px;
+		    top: 5px;
+		}
+
+		h3{
+			width: 100%;
+		    line-height: 80px;
+		    text-align: center;
+		    font-size: 24px;
+		}
+
+		.colorBox div ul{
+			overflow: hidden;
+		}
+
+		.colorBox .divBox{
+		    width: 250px;
+    		height: 300px;
+		    float: left;
+		    background: #fff;
+		    border-radius: 20px;
+		    box-shadow: 5px 5px 10px #ddd;
+		    /* padding: 25px 30px; */
+		    margin: 10px;
+		}
+		.colorBox .divBox .colorShow{ width: 170px;height: 170px; border-radius: 50%; margin: 30px 0 40px 41px;box-shadow: 4px 4px 10px #f2f2f2;}
+
+		.colorBox .divBox .colorName{
+			font-size: 12px;
+		    color: #000;
+		    width: 100%;
+		    height: 20px;
+		    line-height: 20px;
+		    margin-left: 10px;
+		}
+		.colorBox .divBox .colorName span{
+			line-height: 20px;
+			text-shadow: 1px 1px 1px #757575;
+			margin-left: 6px;
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<div class="colorWWW">
+		<h3>网站</h3>
+		<ul class="colorLink">
+			<li><a href="http://colorhunt.co/"><img src="img/ColorHuntLogo.png" height="40" width="38" alt="">Color Hunt</a></li>
+			<li><a href="https://www.ubuuk.com/">优波</a></li>
+		</ul>
+	</div>
+	<div class="colorBox">
+		<div class="colorAtla"><!--色卡-->
+			<h3>渐变色卡</h3>
+			<ul></ul>
+		</div>
+		<!-- <div class="redYellow">
+			<h3>红黄</h3>
+			<ul></ul>
+		</div>
+		<div class="yellowGreen">
+			<h3>黄绿</h3>
+			<ul></ul>
+		</div>
+		<div class="greenBlue">
+			<h3>绿蓝</h3>
+			<ul></ul>
+		</div>
+		<div class="bluePurple">
+			<h3>蓝紫</h3>
+			<ul></ul>
+		</div>
+		<div class="purpleRed">
+			<h3>紫红</h3>
+			<ul></ul>
+		</div>
+		<div class="whiteBlack">
+			<h3>黑白灰</h3>
+			<ul></ul>
+		</div> -->
+	</div>
+	<script>
+	$(function(){
+		var colorData = [{
+
+			"colorLabel":[
+			//灰
+				{"bgDir":"-webkit-linear-gradient", "bgDeg":"0", "bg":"#fdfbfb,#ebedee"},
+				{"bgDir":"-webkit-linear-gradient", "bgDeg":"-45", "bg":"#f5f7fa,#c3cfe2"},
+				{"bgDir":"-webkit-linear-gradient", "bgDeg":"90", "bg":"#29323c,#485563"},
+			//红
+				{"bgDir":"-webkit-linear-gradient", "bgDeg":"0", "bg":"#f093fb,#f5576c"},
+				{"bgDir":"-webkit-linear-gradient", "bgDeg":"0", "bg":"#fa709a,#fee140"},
+				{"bgDir":"-webkit-linear-gradient", "bgDeg":"90", "bg":"#d299c2,#fef9d7"},
+				{"bgDir":"-webkit-linear-gradient", "bgDeg":"-90", "bg":"#a8edea,#fed6e3"},
+				{"bgDir":"-webkit-linear-gradient", "bgDeg":"90", "bg":"#ff9a9e,#fad0c4"},
+				{"bgDir":"-webkit-linear-gradient", "bgDeg":"90", "bg":"#ff9a9e,#fecfef"},
+				{"bgDir":"-webkit-linear-gradient", "bgDeg":"90", "bg":"#ffc3a0,#ffafbd"},
+				{"bgDir":"-webkit-linear-gradient", "bgDeg":"90", "bg":"#f58ca1,#f77890,#fc9a8e"},
+				{"bgDir":"-webkit-linear-gradient", "bgDeg":"90", "bg":"#ee9ca7,#ffdde1"},
+				{"bgDir":"-webkit-linear-gradient", "bgDeg":"90", "bg":"#ff9a9e,#fafd0c"},
+				{"bgDir":"-webkit-linear-gradient", "bgDeg":"90", "bg":"#ff9a9e,#fecfef"},
+				{"bgDir":"-webkit-linear-gradient", "bgDeg":"90", "bg":"#feada6,#f5efef"},
+			//黄
+				{"bgDir":"-webkit-linear-gradient", "bgDeg":"-45", "bg":"#fdfcfb,#e2d1c3"},
+				{"bgDir":"-webkit-linear-gradient", "bgDeg":"90", "bg":"#fddb92,#d1fdff"},
+				{"bgDir":"-webkit-linear-gradient", "bgDeg":"90", "bg":"#ffecd2,#fcb69f"},
+				{"bgDir":"-webkit-linear-gradient", "bgDeg":"0", "bg":"#f6d365,#fda085"},
+				{"bgDir":"-webkit-linear-gradient", "bgDeg":"90", "bg":"#ffecd2,#fcb69f"},
+			//绿
+				{"bgDir":"-webkit-linear-gradient", "bgDeg":"0", "bg":"#43e97b,#38f9d7"},
+				{"bgDir":"-webkit-linear-gradient", "bgDeg":"90", "bg":"#b7f8db,#50a7c2"},
+				{"bgDir":"-webkit-linear-gradient", "bgDeg":"90", "bg":"#96deda,#50c9c3"},
+				{"bgDir":"-webkit-linear-gradient", "bgDeg":"90", "bg":"#13547a,#80d0c7"},
+				{"bgDir":"-webkit-linear-gradient", "bgDeg":"-45", "bg":"#b8fee2,#2f95ab,#4f759c"},
+			//蓝
+				{"bgDir":"-webkit-linear-gradient", "bgDeg":"0", "bg":"#4facfe,#00fafe"},
+				{"bgDir":"-webkit-linear-gradient", "bgDeg":"90", "bg":"#330867,#30cfd0"},
+				{"bgDir":"-webkit-linear-gradient", "bgDeg":"90", "bg":"#5ee7df,#b490ca"},
+				{"bgDir":"-webkit-linear-gradient", "bgDeg":"-45", "bg":"#89f7fe,#66a6ff"},
+				{"bgDir":"-webkit-linear-gradient", "bgDeg":"90", "bg":"#a3bded,#6991c7"},
+				{"bgDir":"-webkit-linear-gradient", "bgDeg":"90", "bg":"#54a1d1,#2086c7"},
+			//紫	
+				{"bgDir":"-webkit-linear-gradient", "bgDeg":"-90", "bg":"#fdd2f9,#fad0c4"},
+				{"bgDir":"-webkit-linear-gradient", "bgDeg":"0", "bg":"#e0c3fc,#8ec5fc"},
+				{"bgDir":"-webkit-linear-gradient", "bgDeg":"-45", "bg":"#667eea,#764ba2"},
+				{"bgDir":"-webkit-linear-gradient", "bgDeg":"90", "bg":"#a18cd1,#fbc2eb"},
+				{"bgDir":"-webkit-linear-gradient", "bgDeg":"90", "bg":"#fbc2eb,#a6c1ee"},
+				{"bgDir":"-webkit-linear-gradient", "bgDeg":"90", "bg":"#48c6ef,#6f86d6"}
+			]
+			
+		}];
+
+		function addColor(colorName,  bgDir, bgDeg, bg ){
+			var bgT = bg.split(",");
+			var bgTxt= "";
+			for(var i=0; i<bgT.length; i++){
+				var bgTemp = '<span style="color:'+ bgT[i] +';">'+ bgT[i] +'</span>';
+				bgTxt+= bgTemp;
+			}
+			//console.log(bgTxt);
+			//console.log( '<div style="background:'+ bgDir +'('+ bgDeg + 'deg,' + bg +');">'+ bg +'</div>' );
+			$(colorName).append( '<li class="divBox"><div class="colorShow" style="background:'+ bgDir +'('+ bgDeg + 'deg,' + bg +');"></div><div class="colorName">'+ bgTxt +'</div></li>');
+
+		}
+
+		for(var i=0;i<colorData[0].colorLabel.length;i++){
+			//console.log( colorData[0].colorLabel[i].bgDir);
+			addColor( ".colorAtla ul", colorData[0].colorLabel[i].bgDir, colorData[0].colorLabel[i].bgDeg, colorData[0].colorLabel[i].bg );
+		}
+
+
+
+	});
+	</script>
+</body>
+</html>
