@@ -20,15 +20,13 @@
 
 		.colorWWW li{
 		    float: left;
-		    height: 50px;
-		    line-height: 50px;
-		    font-size: 20px;
-		    font-weight: 600;
 		    background-color: #fff !important;
-		    border-radius: 6px;
+		    border-radius: 8px;
 		    margin: 10px;
-		    width: 155px;
-    		padding-right: 5px;
+		    width: 146px;
+		    height: 80px;
+		    overflow: hidden;
+		    position: relative;
 		}
 
 		.colorWWW li:hover{
@@ -36,18 +34,23 @@
 			cursor: pointer;
 		}
 
-		.colorWWW a{
-			position: relative;
-		    display: block;
-		    line-height: 50px;
-		    padding-left: 50px;
-		    font-weight: 600;
+		.colorWWW li:hover span{
+			display: block;
 		}
 
-		.colorWWW a img{
+		.colorWWW a span{
 		 	position: absolute;
-		    left: 5px;
-		    top: 5px;
+		    bottom: 0;
+		    left: 0;
+		    width: 146px;
+		    text-align: center;
+		    display: block;
+		    background: rgba(0,0,0,0.5);
+		    font-size: 16px;
+		    color: #fff;
+	        height: 20px;
+		    line-height: 20px;
+		    display: none;
 		}
 
 		h3{
@@ -93,8 +96,9 @@
 	<div class="colorWWW">
 		<h3>网站</h3>
 		<ul class="colorLink">
-			<li><a href="http://colorhunt.co/" target="_black"><img src="img/ColorHuntLogo.png" height="40" width="38" alt="">Color Hunt</a></li>
-			<li><a href="https://www.ubuuk.com/" target="_black">优波</a></li>
+			<li><a href="http://colorhunt.co/" target="_black"><img src="img/logo_ColorHunt.jpg" alt=""><span>Color Hunt</span></a></li>
+			<li><a href="https://www.ubuuk.com/" target="_black"><img src="img/logo_uBuuk.jpg" alt=""><span>优波</span></a></li>
+			<li><a href="https://uigradients.com/#CompareNow" target="_black"><img src="img/logo_uigiadients.jpg" alt=""><span>UiGiadients</span></a></li>
 		</ul>
 	</div>
 	<div class="colorBox">
