@@ -1,3 +1,2 @@
-flex-add
-Å£¼ÑÅåµÄ¸öÈËÍøÕ¾
- [demo](https://kingluoluo.github.io/ANNUIWebsite/index.html)
+A personal website for Niu Jiapei
+https://kingluoluo.github.io/ANNUIWebsite/index.html
